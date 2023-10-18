@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AppTrack</title>
+    <link rel="stylesheet" type ="text/css" href = "main.css">
+</head>
+<body>
+    
+    <div class="top-banner">
+        <h1 class="banner-text">AppTrack</h1>
+        <p class="subtext">A better way to apply!</p>
+    </div>
+
+
+    <form id="jobApplicationForm">
+        <h1>Add Application</h1>
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="company" pattern="[a-zA-Z]+" required><br><br>
+
+        <label for="position">Position:</label>
+        <input type="text" id="position" name="position" pattern="[a-zA-Z0-9]+" required><br><br>
+
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="Applied">Applied</option>
+            <option value="Rejected">Rejected</option>
+            <option value="Offered">Offered</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class = "dashboard">
+        <h3>Dashboard</h3>
+        <ul id="appList">
+            <!-- Existing list items go here, or leave it empty -->
+            
+        </ul>
+
+
+
+    </div>
+
+
+    <script>
+
+        document.getElementById('jobApplicationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Get the values from the input fields
+            const company = document.getElementById('company').value;
+            const position = document.getElementById('position').value;
+            const status = document.getElementById('status').value;
+
+            const appList = document.getElementById('appList');
+
+           
+            const listItem = document.createElement('li');
+            listItem.textContent = company + " " + position + " " + status;
+
+            company.value = '';
+            position.value = '';
+            status.value = '';
+            
+
+            // little test
+            alert(`Company: ${company}\nPosition: ${position}\nStatus: ${status}`);
+        });
+    </script>
+</body>
+</html>
