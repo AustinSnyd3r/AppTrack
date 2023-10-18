@@ -1,2 +1,3 @@
 # AppTrack
-Work in progress FullStack application. Plan: Create Full stack web application using Spring Boot and React. Use Spring Boot and MySQL Database to create the backend (Restful web service API) and use React.js to create the frontend application with Material UI and React Hooks. RESTful
+Work in progress FullStack application. Plan: Create Full stack web application using Spring Boot and React. Use Spring Boot and MySQL Database to create the backend (Restful web service API) and use React.js to create the frontend application with Material UI and React Hooks. Application tracking website. Allow users to add applications with: Company name, position(s), date, and status. Allow for sorting and searching of applications. Implement JavaMail to check mail inboxes and notify user if they have recieved a rejection/advancement email, then prompt to change status of application. 
+
