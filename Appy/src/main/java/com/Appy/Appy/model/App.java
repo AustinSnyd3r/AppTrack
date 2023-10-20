@@ -22,6 +22,11 @@ public class App {
 
     }
 
+    @Override
+    public String toString(){
+        return "ID: " + id + "COMPANY: " + company + "POSITION: " + position + "STATUS: " + status;
+    }
+    
     //Getters and setters
     public String getCompany() {
         return company;
