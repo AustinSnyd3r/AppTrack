@@ -7,4 +7,7 @@ public interface AppService {
     //abstract class
     public App saveApp(App app);
     public List<App> getAllApps();
+
+    public void deleteAppById(int id);
+    public String updateStatus(int id, String newStatus);
 }

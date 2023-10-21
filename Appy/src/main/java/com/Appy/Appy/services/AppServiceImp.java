@@ -20,4 +20,24 @@ public class AppServiceImp implements AppService {
     public List<App> getAllApps(){
         return appRepository.findAll();
     }
+
+
+    @Override
+    public void deleteAppById(int id){
+        appRepository.deleteById(id);
+    }
+
+    @Override
+    public String updateStatus(int id, String newStatus){
+       App app = appRepository.findById(id).orElse(null);
+       
+       //could add in a check if it is one of my status pre-sets. rejected, offer, applied
+       if(app != null){
+         app.setStatus(newStatus);
+         appRepository.save(app);
+       }
+       return "happy fucking vscode? ";
+        
+    }
+
 }
