@@ -49,6 +49,14 @@ public class AppController {
         appService.updateStatus(id, status);
         return "Status has been changed to " + status;
     }
+
+    //For testing purposes. 
+    @DeleteMapping("/removeAll")
+    public void deleteAll(){
+        appService.deleteAll();
+        //le troll
+        System.out.println("LOST ALL DATA ALERT ALERT ALERT. (THERES NOTHING YOU CAN DO!)");
+    }
     
 
 }

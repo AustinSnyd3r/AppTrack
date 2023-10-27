@@ -10,4 +10,5 @@ public interface AppService {
 
     public void deleteAppById(int id);
     public String updateStatus(int id, String newStatus);
+    public void deleteAll();
 }

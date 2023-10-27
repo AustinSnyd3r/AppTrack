@@ -40,4 +40,8 @@ public class AppServiceImp implements AppService {
         
     }
 
+    @Override
+    public void deleteAll(){
+        appRepository.deleteAll();
+    }
 }
