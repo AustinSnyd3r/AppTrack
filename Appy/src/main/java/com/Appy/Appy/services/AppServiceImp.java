@@ -4,12 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import com.Appy.Appy.repository.AppRepository;
+//import javax.mail.*;
 
 @Service
 public class AppServiceImp implements AppService {
     
     @Autowired
     private AppRepository appRepository;
+
+    //@Autowired
+    //private JavaMailRe javaMailReceiver;
 
     @Override
     public App saveApp(App app){
